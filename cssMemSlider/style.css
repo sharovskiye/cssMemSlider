@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    transition: all 0.8s;
 }
 
 body{
@@ -8,7 +9,7 @@ body{
 }
 
 .slider{
-    width: 80vw;
+    width: 80vh;
 
     position: absolute;
     top: 50%;
@@ -19,7 +20,7 @@ body{
 }
 
 img{
-    width: 80vw;
+    width: 80vh;
 
 }
 
@@ -49,7 +50,18 @@ input{
     
 }
 
-#slide1:checked ~ .img1{
+.texts{
+    /* width: 30vw; */
+    position: absolute;
+    bottom: 1%;
+    display: flex;
+    overflow: hidden;
+}
+p{
+    width: 80vw;
+}
+
+#slide1:checked ~ .img{
     margin-left: 0%;
 }
 #slide2:checked ~ .img1{
@@ -62,7 +74,17 @@ input{
     margin-left:-300%;
 }
 
-label:hover ~ img{
-    background-color: aqua;
-    border-radius: 50%;
+
+#slide1:checked ~ .texts .text1{
+    margin-left: 0%;
 }
+#slide2:checked ~ .texts .text1{
+    margin-left: -25%;
+}
+#slide3:checked ~ .texts .text1{
+    margin-left:-50%;
+}
+#slide4:checked ~ .texts .text1{
+    margin-left:-75%;
+}
+
